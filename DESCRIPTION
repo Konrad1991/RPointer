@@ -1,0 +1,17 @@
+Package: RPointer
+Type: Package
+Title: Pointer to SEXP object
+Version: 0.1
+Date: 2022-02-28
+Author: Krämer Konrad [aut, cre]
+Maintainer: Krämer Konrad <konrad_kraemer@yahoo.de>
+BugReports: https://github.com/Konrad1991/RPointer
+URL: https://github.com/Konrad1991/RPointer
+Description: Creating pointer to SEXP object
+License: GPL-2
+Imports: Rcpp (>= 1.0.4), R6, inline
+LinkingTo: Rcpp (>= 1.0.4), tidyCpp
+VignetteBuilder: knitr
+Suggests: knitr, kableExtra, rmarkdown
+Encoding: UTF-8
+RoxygenNote: 7.1.2

@@ -14,4 +14,4 @@ LinkingTo: Rcpp (>= 1.0.4), tidyCpp
 VignetteBuilder: knitr
 Suggests: knitr, kableExtra, rmarkdown
 Encoding: UTF-8
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.1

@@ -7,7 +7,7 @@ A small and **very dangerous** R package. You can create a vector on the heap fr
 * [[ --> for indexing; Index starts at 0 not 1!
 * resize --> for resizing the vector
 
-```
+```R
 # Installation:
 remotes::install_github("konrad1991/RPointer")
 # bool values

@@ -13,12 +13,12 @@ Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 
 RcppExport SEXP _rcpp_module_boot_bools();
 RcppExport SEXP _rcpp_module_boot_numeric();
-RcppExport SEXP _rcpp_module_boot_num_p();
+RcppExport SEXP _rcpp_module_boot_integer();
 
 static const R_CallMethodDef CallEntries[] = {
     {"_rcpp_module_boot_bools", (DL_FUNC) &_rcpp_module_boot_bools, 0},
     {"_rcpp_module_boot_numeric", (DL_FUNC) &_rcpp_module_boot_numeric, 0},
-    {"_rcpp_module_boot_num_p", (DL_FUNC) &_rcpp_module_boot_num_p, 0},
+    {"_rcpp_module_boot_integer", (DL_FUNC) &_rcpp_module_boot_integer, 0},
     {NULL, NULL, 0}
 };
 

@@ -1,6 +1,6 @@
 export(bools)
 export(numeric)
-export(num_p)
+export(integer)
 import(Rcpp)
 import(methods)
 useDynLib(RPointer, .registration = TRUE)

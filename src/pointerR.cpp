@@ -23,9 +23,6 @@ public:
   }
 
   ~Pointer() {
-    if(data != nullptr) delete[] data; else Rcpp::stop("Error deleting");
-    size = 0;
-    data = nullptr;
   }
   
   void deleteit() {
@@ -92,47 +89,16 @@ RCPP_MODULE(numeric) {
   ;
 }
 
-
-
-
-
-class P {
-  
-  public:
-    double* data;
-    size_t size;
-    
-    P(SEXP obj) {
-      data = REAL(obj);
-      size = Rf_length(obj);
-    }
-    
-    
-    double& operator[](int i) {
-      return data[i];
-    }
-    
-    double& at(int i) {
-      return data[i];
-    }
-    
-    void set(int i, double value ) { this -> at( i ) = value; }
-    
-    void print() {
-      for(size_t i = 0; i < size; i++) {
-        Rcpp::Rcout << data[i] << std::endl;
-      }
-    }
-  
-};
-
 // logical, integer, real, string (or character)
-RCPP_MODULE(num_p) {
-  Rcpp::class_<P>( "num_p" )
-  .constructor<SEXP>()
-  .field( "size", &P::size )
-  .method( "print", &P::print )
-  .method( "[[", &P::at )
-  .method( "[[<-", &P::set )
+RCPP_MODULE(integer) {
+  Rcpp::class_<Pointer<int> >( "integer" )
+  .constructor<int>()
+  .field( "size", &Pointer<int>::size )
+  .method( "print", &Pointer<int>::print )
+  .method( "[[", &Pointer<int>::at )
+  .method( "[[<-", &Pointer<int>::set )
+  .method( "resize", &Pointer<int>::resize )
+  .method( "delete", &Pointer<int>::deleteit )
   ;
 }
+
